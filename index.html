@@ -15,7 +15,7 @@
 		</header>
 
 		<main>
-		<form>
+		<form class="login">
 			<div class="imgcontainer">
 				<img src="./img/avatar.jpg" alt = "Avatar" height="84" width="126">
 			</div>
@@ -26,14 +26,14 @@
 						Correo Electronico
 					</b>
 				</label>
-				<input type="text" placeholder="Ingrese su correo electronico" required>
+				<input class="userEmail" type="email" placeholder="Ingrese su correo electronico" required>
 
 				<label for="psw"> 
 					<b>
 						Contraseña
 					</b>
 				</label>
-				<input type="password" placeholder="Ingrese la Contraseña" required>
+				<input class="userPassword" type="password" placeholder="Ingrese la Contraseña" required>
 
 				<button type="submit"> 
 					Ingresar
@@ -63,7 +63,11 @@
 			</ul>
 		</nav>
 		</footer>
-
+		<script
+		src="https://code.jquery.com/jquery-3.4.0.js"
+		integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+		crossorigin="anonymous"></script>
+		<script src="./js/index.js"></script>
 	</body>
 
 </html>

@@ -15,7 +15,7 @@
 		</header>
 
 		<main>
-		<form>
+		<form class="nUserForm">
 			<div class="imgcontainer">
 				<img src="./img/avatar.jpg" alt = "Avatar" height="84" width="126">
 			</div>
@@ -26,35 +26,35 @@
 						Nombre del Doctor
 					</b>
 				</label>
-				<input type="text" placeholder="Ingrese el nombre del doctor" required>
+				<input class="nameDoctor" type="text" placeholder="Ingrese el nombre del doctor" required>
 
 				<label for="email"> 
 					<b>
 						Correo Electronico
 					</b>
 				</label>
-				<input type="text" placeholder="Ingrese el correo electronico" required>
+				<input class="userEmail" type="email" placeholder="Ingrese el correo electronico" required>
 
 				<label for="psw"> 
 					<b>
 						Contraseña
 					</b>
 				</label>
-				<input type="password" placeholder="Ingrese la contraseña" required>
+				<input class="userPassword" type="password" placeholder="Ingrese la contraseña" required>
 
 				<label for="psw2"> 
 					<b>
 						Confirmar Contraseña
 					</b>
 				</label>
-				<input type="password" placeholder="Ingrese nuevamente la contraseña" required>
+				<input class="confirmPassword" type="password" placeholder="Ingrese nuevamente la contraseña" required>
 
 				<label for="mpsw" > 
 					<b>
 						Contraseña Maestra
 					</b>
 				</label>
-				<input type="password" placeholder="Ingrese la Contraseña Maestra" required>
+				<input class="masterPassword" type="password" placeholder="Ingrese la Contraseña Maestra" required>
 
 				<button type="submit"> 
 					Ingresar
@@ -85,7 +85,11 @@
 			</ul>
 		</nav>
 		</footer>
-
+		<script
+		src="https://code.jquery.com/jquery-3.4.0.js"
+		integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+		crossorigin="anonymous"></script>
+		<script src="./js/nuser.js"></script>
 	</body>
 
 </html>
