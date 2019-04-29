@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Historias Clinicas
+		</title>
+		<link href="./css/form.css" rel="stylesheet" type="text/css">
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<header>
+				<h1>
+					Optica Palacios
+				<h1>
+		</header>
+
+		<main>
+				<h1>
+					HISTORIA CLINICA 
+				</h1>
+		<form>
+
+			<div class="Paciente">
+				<h3>
+					Datos del paciente
+				</h3>
+
+				<label for="Nombre">
+					<b>
+						Nombre
+					</b>
+				</label>
+				<input type="text" required>
+
+				<label for="Edad">
+					<b>
+						Fecha de nacimiento
+					</b>
+				</label>
+				<input type="date" required>
+
+				<label for="Ocupacion">
+					<b>
+						Ocupacion
+					</b>
+				</label>
+				<input type="text">
+
+
+				<label for="Dirrecion">
+					<b>
+						Dirección
+					</b>
+				</label>
+				<input type="text" required>
+
+
+				<label for="Tel">
+					<b>
+						Telefono
+					</b>
+				</label>
+				<input type="text" required>
+
+				<label for="CD">
+					<b>
+						Ciudad
+					</b>
+				</label>
+				<input type="text" required>
+
+				<label for="Estado">
+					<b>
+						Estado
+					</b>
+				</label>
+				<input type="text" required>
+
+				<label for="Motivo de Consulto">
+					<b>
+						Telefono
+					</b>
+				</label>
+				<input type="text" required>
+
+				<label for="HistorialClinico">
+					<b>
+						Historial Clinico
+					</b>
+				</label>
+				<textarea>Introduzca el historial clinico del paciente </textarea>
+			</div>
+
+			<div class="Oftalmoscopia">
+				<h3>
+					Oftalmoscopia 
+				</h3>
+			</div>
+
+			<span>
+					Observaciones Ojo Derecho
+					<textarea>Introduzca observaciones del Ojo Derecho </textarea>
+			</span>
+			<span>
+					Observaciones Ojo Izquierdo 
+					<textarea>Introduzca observaciones del Ojo Izquierdo </textarea>
+			</span>
+
+
+				<!-- Flexbox -->
+				<!-- RX Anterior -->
+				<span>
+				<table>
+					<tr>
+						<th>
+							RX. Anterior
+						</th>
+					</tr>
+					<tr>
+						<th> 
+							ESF CIL EJE ADD
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<span>
+								O.D.
+							</span>
+							<input type="text" required>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<span> O.I. </span>
+							<input type="text" required>
+						</th>
+					</tr>
+				</table>
+				</span>
+
+				<!-- Agudeza Visual -->
+				<span>
+				<table>
+					<tr>
+						<th> </th>
+						<th> Agudeza Visual </th>
+						<th> RX Anterior </th>
+					</tr>
+					<tr>
+						<th> S/L </th>
+						<th> A/E </th>
+						<th> C.V </th>
+					</tr>
+					<tr>
+						<th> <span> 20/ </span> 
+							<input type="text" required> </th>
+						<th> <span> 20/ </span> <input type="text" required> </th>
+						<th> <span> 20/ </span> <input type="text" required> </th>
+					</tr>
+					<tr>
+						<th> <span> 20/ </span> <input type="text" required> </th>
+						<th> <span> 20/ </span> <input type="text" required> </th>
+						<th> <span> 20/ </span> <input type="text" required> </th>
+					</tr>
+				</table>
+				</span>
+
+				<!-- Retinscopia -->
+				<span>
+				<table>
+					<tr>
+						<th> Retinoscopia </th>
+					</tr>
+					<tr>
+						<th> <span> O.D. </span>   <input type="text" required> </th>
+						<th> <span> 20/ </span>   <input type="text" required> </th>
+					</tr>
+					<tr>
+						<th> <span> O.I. </span>   <input type="text" required> </th>
+						<th> <span> 20/ </span>   <input type="text" required> </th>
+					</tr>
+				</table>
+				</span>
+
+
+				<!-- Examen Subjetivo-->
+				<span> 
+				<table>
+					<tr>
+						<th> Examen Subjetivo </th>
+						<th> C/V L </th>
+						<th> C/V C </th>
+					</tr>
+					<tr>
+						<th> <span> O.D. </span>   <input type="text" required> </th>
+						<th> <span> 20/ </span>   <input type="text" required> </th>
+						<th> <input type="text" required> </th>
+					</tr>
+					<tr>
+						<th> <span> O.I. </span>   <input type="text" required> </th>
+						<th> <span> 20/ </span>   <input type="text" required> </th>
+						<th> <input type="text" required> </th>
+					</tr>
+
+				</table>
+				</span>
+
+				<div>
+					<h3>
+						RX Final
+					</h3>
+				</div>
+
+				<div>
+				<table>
+					<tr>
+						<th> ESF CIL EJE </th>
+						<th> ADD. </th> 
+						<th> A/V </th>
+						<th> Tipo Lente </th>
+						<th> Material </th>
+						<th> Color </th>
+					</tr>
+					<tr>
+						<th> <span> O.D. </span>   <input type="text" required> </th>
+						<th> <input type="text" required> </th>
+						<th> <span> 20/ </span>   <input type="text" required> </th>
+						<th> <input type="text" required> </th>
+						<th> <input type="text" required> </th>
+						<th> <input type="text" required> </th>
+					</tr>
+					<tr>
+						<th> <span> O.D. </span>   <input type="text" required> </th>
+						<th> <input type="text" required> </th>
+						<th> <span> 20/ </span>   <input type="text" required> </th>
+					</tr>
+				</table>
+				</div>
+
+			<span>
+					Observaciones Finales					
+					<textarea>Introduzca observaciones finales </textarea>
+			</span>
+
+			<div>
+			<button type="submit"> 
+					Ingresar
+				</button>
+			</div>
+
+		</main>
+
+		<footer>	
+		</footer>
+
+	</body>
+
+</html>
+
+
