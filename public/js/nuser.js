@@ -60,6 +60,7 @@ function addUser(data, newData){
 			})
 			.then(responseJSON =>{
 				console.log('exito');
+				window.open('./index.html','_self');
 			})
 			.catch(err => {
 				console.log(err);
@@ -68,13 +69,11 @@ function addUser(data, newData){
 	else
 	{
 		alert("Usuario ya esta registrado");
-		nameDoctor = $('.nameDoctor').val("");
-		userEmail = $('.userEmail').val("");
-		userPassword = $('.userPassword').val("");
-		confirmPassword = $('.confirmPassword').val("");
-		masterPassword = $('.masterPassword').val("");
+		$('.userEmail').val("");
+		$('.userPassword').val("");
+		$('.confirmPassword').val("");
+		$('.masterPassword').val("");
 	}
-
 }
 
 function watchForm(){
