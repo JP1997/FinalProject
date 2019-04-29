@@ -30,44 +30,42 @@
 						Nombre
 					</b>
 				</label>
-				<input type="text" required>
+				<input class="nombrePaciente" type="text" required>
 
 				<label for="Edad">
 					<b>
 						Fecha de nacimiento
 					</b>
 				</label>
-				<input type="date" required>
+				<input class="edadPaciente" type="date" required>
 
 				<label for="Ocupacion">
 					<b>
 						Ocupacion
 					</b>
 				</label>
-				<input type="text">
-
+				<input class="ocupacionPaciente" type="text">
 
 				<label for="Dirrecion">
 					<b>
 						Dirección
 					</b>
 				</label>
-				<input type="text" required>
-
+				<input class="direccionPaciente" type="text" required>
 
 				<label for="Tel">
 					<b>
 						Telefono
 					</b>
 				</label>
-				<input type="text" required>
+				<input class="telefonoPaciente" type="text" required>
 
 				<label for="CD">
 					<b>
 						Ciudad
 					</b>
 				</label>
-				<input type="text" required>
+				<input class="ciudadPaciente" type="text" required>
 
 				<label for="Estado">
 					<b>
@@ -81,14 +79,14 @@
 						Telefono
 					</b>
 				</label>
-				<input type="text" required>
+				<input class="motivoPaciente" type="text" required>
 
 				<label for="HistorialClinico">
 					<b>
 						Historial Clinico
 					</b>
 				</label>
-				<textarea>Introduzca el historial clinico del paciente </textarea>
+				<textarea class="historialClinico">Introduzca el historial clinico del paciente </textarea>
 			</div>
 
 			<div class="Oftalmoscopia">
@@ -126,13 +124,13 @@
 							<span>
 								O.D.
 							</span>
-							<input type="text" required>
+							<input class="RXAnteriorODESF" type="text" required>
 						</th>
 					</tr>
 					<tr>
 						<th>
 							<span> O.I. </span>
-							<input type="text" required>
+							<input class="RXAnteriorOIESF" type="text" required>
 						</th>
 					</tr>
 				</table>
@@ -152,15 +150,14 @@
 						<th> C.V </th>
 					</tr>
 					<tr>
-						<th> <span> 20/ </span> 
-							<input type="text" required> </th>
-						<th> <span> 20/ </span> <input type="text" required> </th>
-						<th> <span> 20/ </span> <input type="text" required> </th>
+						<th> <span> 20/ </span> <input class="AgudezaODSL" type="text" required> </th>
+						<th> <span> 20/ </span> <input class="AgudezaODAE" type="text" required> </th>
+						<th> <span> 20/ </span> <input class="AgudezaODCV" type="text" required> </th>
 					</tr>
 					<tr>
-						<th> <span> 20/ </span> <input type="text" required> </th>
-						<th> <span> 20/ </span> <input type="text" required> </th>
-						<th> <span> 20/ </span> <input type="text" required> </th>
+						<th> <span> 20/ </span> <input class="AgudezaOISL" type="text" required> </th>
+						<th> <span> 20/ </span> <input class="AgudezaOIAE" type="text" required> </th>
+						<th> <span> 20/ </span> <input class="AgudezaOICV" type="text" required> </th>
 					</tr>
 				</table>
 				</span>
@@ -172,12 +169,12 @@
 						<th> Retinoscopia </th>
 					</tr>
 					<tr>
-						<th> <span> O.D. </span>   <input type="text" required> </th>
-						<th> <span> 20/ </span>   <input type="text" required> </th>
+						<th> <span> O.D. </span>   <input class="RetOD" type="text" required> </th>
+						<th> <span> 20/ </span>   <input class="RetOD20" type="text" required> </th>
 					</tr>
 					<tr>
-						<th> <span> O.I. </span>   <input type="text" required> </th>
-						<th> <span> 20/ </span>   <input type="text" required> </th>
+						<th> <span> O.I. </span>   <input class="RetOI" type="text" required> </th>
+						<th> <span> 20/ </span>   <input class="RetOI20" type="text" required> </th>
 					</tr>
 				</table>
 				</span>
@@ -192,14 +189,14 @@
 						<th> C/V C </th>
 					</tr>
 					<tr>
-						<th> <span> O.D. </span>   <input type="text" required> </th>
-						<th> <span> 20/ </span>   <input type="text" required> </th>
-						<th> <input type="text" required> </th>
+						<th> <span> O.D. </span>   <input class="SubjetivoOD" type="text" required> </th>
+						<th> <span> 20/ </span>   <input class="SubjetivoODCVL" type="text" required> </th>
+						<th> <input class="SubjetivoODCVC" type="text" required> </th>
 					</tr>
 					<tr>
-						<th> <span> O.I. </span>   <input type="text" required> </th>
-						<th> <span> 20/ </span>   <input type="text" required> </th>
-						<th> <input type="text" required> </th>
+						<th> <span> O.I. </span>   <input class="SubjetivoOI" type="text" required> </th>
+						<th> <span> 20/ </span>   <input class="SubjetivoOICVL" type="text" required> </th>
+						<th> <input class="SubjetivoOICVC" type="text" required> </th>
 					</tr>
 
 				</table>
@@ -222,28 +219,28 @@
 						<th> Color </th>
 					</tr>
 					<tr>
-						<th> <span> O.D. </span>   <input type="text" required> </th>
-						<th> <input type="text" required> </th>
-						<th> <span> 20/ </span>   <input type="text" required> </th>
-						<th> <input type="text" required> </th>
-						<th> <input type="text" required> </th>
-						<th> <input type="text" required> </th>
+						<th> <span> O.D. </span>   <input class="RxFinalODESF" type="text" required> </th>
+						<th> <input class="RxFinalODADD" type="text" required> </th>
+						<th> <span> 20/ </span>   <input class="RxFinalODAV" type="text" required> </th>
+						<th> <input class="tipoLente" type="text" required> </th>
+						<th> <input class="material" type="text" required> </th>
+						<th> <input class="color" type="text" required> </th>
 					</tr>
 					<tr>
-						<th> <span> O.D. </span>   <input type="text" required> </th>
-						<th> <input type="text" required> </th>
-						<th> <span> 20/ </span>   <input type="text" required> </th>
+						<th> <span> O.I. </span>   <input class="RxFinalOIESF" type="text" required> </th>
+						<th> <input class="RxFinalOIADD" type="text" required> </th>
+						<th> <span> 20/ </span>   <input class="RxFinalOIAV" type="text" required> </th>
 					</tr>
 				</table>
 				</div>
 
 			<span>
 					Observaciones Finales					
-					<textarea>Introduzca observaciones finales </textarea>
+					<textarea class="observacionesFinales">Introduzca observaciones finales </textarea>
 			</span>
 
 			<div>
-			<button type="submit"> 
+			<button type="submit" class="submitButton"> 
 					Ingresar
 				</button>
 			</div>
@@ -252,7 +249,11 @@
 
 		<footer>	
 		</footer>
-
+		<script
+		src="https://code.jquery.com/jquery-3.4.0.js"
+		integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+		crossorigin="anonymous"></script>
+		<script src="./js/index.js"></script>
 	</body>
 
 </html>
