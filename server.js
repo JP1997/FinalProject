@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParserconst express = require('express');
 const bodyParser = require('body-parser');
 const opRouter = require('./opRouter');
 const mongoose = require('mongoose');
@@ -10,7 +9,7 @@ const jsonParser = bodyParser.json();
 
 app.use(express.static('public'));
 
-app.use('/optic-api',jsonParser,blogRouter);
+app.use('/optic-api',jsonParser,opRouter);
 
 let server;
 
@@ -22,7 +21,7 @@ function runServer(port,databaseUrl){
 			}
 			else {
 				server=app.listen(port, () => {
-					console.log('Your app is runnin in port ', port);
+					console.log('Your app is running in port ', port);
 					resolve();
 				})
 				.on('error',err=>{
