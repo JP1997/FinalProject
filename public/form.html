@@ -21,9 +21,14 @@
 		
 		<fieldset>
 			<legend> Buscador de pacientes </legend>
-			<input  class="PacienteSearchBox" class="searchBox" type="text" placeholder="Ingrese el nombre del paciente a buscar" />
-			<button class= "PacienteSubmitButton" type="submit" class="submitButton">Buscar</button>			
+			<input  class="searchBox" type="text" placeholder="Ingrese el nombre del paciente a buscar" />
+			<button type="submit" class="submitButton">Buscar</button>			
 		</fieldset>
+
+		<div>
+			Doctor
+			<input class="doctorName" type="text">
+		</div>
 
 		<form>
 			<div class="Paciente">
@@ -78,7 +83,7 @@
 						Estado
 					</b>
 				</label>
-				<input type="text" required>
+				<input class="estadoPaciente" type="text" required>
 
 				<label for="Motivo de Consulto">
 					<b>
@@ -93,6 +98,7 @@
 					</b>
 				</label>
 
+				<!-- Agudeza Visual 
 				<div>
 					<select multiple>
 						<option value="Anteojos"> Usa Anteojos </option>
@@ -109,9 +115,8 @@
 						<option value="Hipermia"> Hipermia </option>
 						<option value="Fotofobia"> Fotobia </option>
 						<option value="Mareo"> Mareo </option>
-						
-
 				</div>
+				-->
 
 				<textarea class="historialClinico">Introduzca el historial clinico del paciente </textarea>
 			</div>
@@ -124,11 +129,11 @@
 
 			<span>
 					Observaciones Ojo Derecho
-					<textarea>Introduzca observaciones del Ojo Derecho </textarea>
+					<textarea class="observacionesDerecho" rows="4" cols="50" >Introduzca observaciones del Ojo Derecho </textarea>
 			</span>
 			<span>
 					Observaciones Ojo Izquierdo 
-					<textarea>Introduzca observaciones del Ojo Izquierdo </textarea>
+					<textarea class="observacionesIzquierdo" rows="4" cols="50" >Introduzca observaciones del Ojo Izquierdo </textarea>
 			</span>
 
 
