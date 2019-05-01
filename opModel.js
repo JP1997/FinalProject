@@ -17,42 +17,40 @@ let clinicHistorySchema = mongoose.Schema({
 	ciudad : String,
 	estado : String,
 	motivo : String,
-	historialClinico : {
-
-	},
+	historialClinico : String,
 	ojoDerecho : {
 					observaciones : String,
 					RXAnteriorESF : String,
 					agudezaVisual : {
-										SL : Number,
-										AE : Number,
-										CV : Number
+										SL : String,
+										AE : String,
+										CV : String
 					},
 					retinoscopia : String,
-					retinoscopia20 : Number,
+					retinoscopia20 : String,
 					exSubjetivo : String,
-					exSubjetivoCVL : Number,
-					exSubjetivoCVC : Number,
+					exSubjetivoCVL : String,
+					exSubjetivoCVC : String,
 					RXFinalESF : String,
 					RXFinalADD : String,
-					RXFinalAV : Number,
+					RXFinalAV : String,
 	},
 	ojoIzquierdo :{
 					observaciones : String,
 					RXAnteriorESF : String,
 					agudezaVisual : {
-										SL : Number,
-										AE : Number,
-										CV : Number
+										SL : String,
+										AE : String,
+										CV : String
 					},
 					retinoscopia : String,
-					retinoscopia20 : Number,
+					retinoscopia20 : String,
 					exSubjetivo : String,
-					exSubjetivoCVL : Number,
-					exSubjetivoCVC : Number,
+					exSubjetivoCVL : String,
+					exSubjetivoCVC : String,
 					RXFinalESF : String,
 					RXFinalADD : String,
-					RXFinalAV : Number,
+					RXFinalAV : String,
 	}
 	tipoLente : String,
 	material : String,
@@ -68,11 +66,12 @@ let patientSchema = mongoose.Schema({
 	telefono :String,
 	ciudad : String,
 	estado : String,
-	historialClinico : {}
-
+	historialClinico : String
 })
 
 clinicHistorySchema.index({'$**' : 'text'});
+patientSchema.index({'$**' : 'text'});
+
 
 let ClinicHistory = mongoose.model('ClinicHistory', clinicHistorySchema);
 let Users = mongoose.model('User',userSchema);
@@ -110,11 +109,89 @@ const userList = {
 }
 
 const clinicList ={
+	get : function(){
+		return ClinicHistory.find()
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	add : function(newUser){
+		return ClinicHistory.create(newUser)
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	update : function(pId,body){
+		return ClinicHistory.findOneAndUpdate({_id:pId},{$set : body},{new : true})
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	remove : function(delId){
+		return ClinicHistory.findOneAndDelete({_id:delId})
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	getKeyword : function(keyword){
 
+	}
 }
 
 const patientList = {
-	
+	get : function(){
+		return Patient.find()
+			.then(user => {
+				return user;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	add : function(newUser){
+		return Patient.create(newUser)
+			.then(user => {
+				return user;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	update : function(pId,body){
+		return Patient.findOneAndUpdate({_id:pId},{$set : body},{new : true})
+			.then(patient => {
+				return patient;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	remove : function(delId){
+		return Patient.findOneAndDelete({_id:delId})
+			.then(patient => {
+				return patient;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	getKeyword : function(keyword){
+
+	}
 }
 
 module.exports = {userList};
+module.exports = {clinicList};
+module.exports = {patientList};
