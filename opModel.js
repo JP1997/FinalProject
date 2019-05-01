@@ -10,7 +10,7 @@ let userSchema = mongoose.Schema({
 let clinicHistorySchema = mongoose.Schema({
 	nombre: String,
 	doctor : String,
-	edad : Number,
+	edad : String,
 	ocupacion: String,
 	direccion : String,
 	telefono : String,
@@ -192,6 +192,15 @@ const patientList = {
 	},
 	getByName : function(name){
 		return Patient.find({$text : {$search : name}})
+			.then(patient => {
+				return patient;
+			})
+			.catch(err => {
+				throw new new Error(err);
+			});
+	},
+	getById : function(id){
+		return Patient.find({_id : id})
 			.then(patient => {
 				return patient;
 			})

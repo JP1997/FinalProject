@@ -1,13 +1,48 @@
 
+function newClinic(data){
+	let url = './optic-api/clinic';
+	let settings = {
+					method : 'POST',
+					headers: {
+						'Content-Type' : 'application/json'
+					},
+					body: JSON.stringify(data)
+					};
+
+	fetch(url, settings)
+		.then(response => {
+			if(response.ok){
+				return response.json();
+			}
+			else{
+				return new Promise(function(reoslve,reject){
+					resolve(response.json());
+				})
+				.then(data => {
+					throw new Error(data.message);
+				})
+			}
+		})
+		.then(responseJSON =>{
+			console.log(responseJSON);
+			alert('Paciente salvado exitosamente');
+			window.open('./form.html','_self');
+		})
+		.catch(err => {
+			console.log(err);
+		});
+}
+
 function displayPatients(data){
-	$('.Paciente').html("");
+	$('.divPaciente').html("");
 
 	for(let i = 0; i< data.length;i++){
-		$('.Paciente').append(`
+		$('.divPaciente').append(`
 						<div>
+							<div><input class="idP" type="hidden" value="${data[i]._id}"/></div>
 							<div>Nombre : <input type="text" disabled="disabled" value="${data[i].nombre}"/> </div>
 							<div>Dirección : <input type="text" disabled="disabled" value="${data[i].direccion}"/> </div>
-							<button type="submit" class="buttonPatient"> 
+							<button type="submit" class="usePatient"> 
 								Usar
 							</button> 
 						</div>
@@ -15,11 +50,7 @@ function displayPatients(data){
 		}
 }
 
-
-
-
 function searchPatient(nombre){
-	console.log(nombre);
 	let url = `./optic-api/patient/${nombre}`;
 	let settings = {
 					method : 'GET',
@@ -37,13 +68,11 @@ function searchPatient(nombre){
 		
 		})
 		.then(responseJSON => {
-			console.log(responseJSON);
 			displayPatients(responseJSON.patient);
 		})
 		.catch(err => {
 			console.log(err);
 		});
-
 }
 
 function watchForm(){
@@ -145,7 +174,8 @@ function watchForm(){
 			color : color,
 			observacionFinal: observacionesFinales
 		};
-		console.log(data);
+
+		newClinic(data);
 	});
 
 	$('.submitPatient').on('click', function(event) {
@@ -163,8 +193,52 @@ function onload(){
 function init(){
 	$(watchForm);
 	$(onload);
+}
+
+function showForm(data){
+	console.log(data);
+	$('.divPaciente').html("");
+	$('.searchPatient').hide();
+	$('.historialForm').show();
+
+	$('.nombrePaciente').val(data[0].nombre);
+	$('.edadPaciente').val(data[0].fechaNacimiento);
+	$('.ocupacionPaciente').val(data[0].ocupacion);
+	$('.direccionPaciente').val(data[0].direccion);
+	$('.telefonoPaciente').val(data[0].telefono);
+	$('.ciudadPaciente').val(data[0].ciudad);
+	$('.estadoPaciente').val(data[0].estado);
+	$('.historialClinico').val(data[0].historialClinico);
 
 }
 
-
 $(init);
+
+$('.divPaciente').on("click",".usePatient", function(event) {
+	event.preventDefault();
+
+	let idP = $(this).parent().find('.idP').val();
+
+	let url = `./optic-api/patientGet/${idP}`;
+	let settings = {
+					method : 'GET',
+					headers: {
+						'Content-Type' : 'application/json'
+					}
+	};
+
+	fetch(url,settings)
+		.then(response => {
+			if(response.ok){
+				return response.json();
+			}
+			throw new Error(response.statusText)
+		
+		})
+		.then(responseJSON => {
+			showForm(responseJSON.patient);
+		})
+		.catch(err => {
+			console.log(err);
+		});
+});

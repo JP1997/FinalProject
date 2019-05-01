@@ -136,6 +136,27 @@ router.get('/patient/:name', (req,res,next) => {
 		});	
 });
 
+router.get('/patientGet/:id', (req,res,next) => {
+
+	let id = req.params.id;
+
+	patientList.getById(id)
+		.then(response => {
+			res.status(200).json({
+				message : 'Successfully sent all the users',
+				status : 200,
+				patient : response
+			});
+		})
+		.catch(err =>{
+			res.status(500).json({
+				message: "Internal server error",
+				status : 500 
+			});
+			return next();
+		});	
+});
+
 router.post('/patient', (req,res,next) => {
 	let requiredFields = ['nombre'];
 
@@ -256,7 +277,7 @@ router.get('/clinic', (req,res,next) =>{
 });
 
 router.post('/clinic', (req,res,next) => {
-	let requiredFields = ['nombre','fechaNacimiento','direccion','telefono','ciudad','estado'];
+	let requiredFields = ['nombre'];
 
 	for(let i = 0; i < requiredFields.length; i++){
 		let currentField = requiredFields[i];
@@ -268,7 +289,10 @@ router.post('/clinic', (req,res,next) => {
 			return next();
 		}
 	}
+
 	let newUser = req.body;
+	console.log(newUser);
+	console.log('hola');
 	clinicList.add(newUser)
 		.then(response => {
 			res.status(201).json({
