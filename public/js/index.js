@@ -24,7 +24,7 @@ function checkUser(data){
 			})
 			if(check){
 				alert("Success")
-				window.open('./nuser.html', "_self");
+				window.open('./hub.html', "_self");
 			}
 			else{
 				alert("Correo o contraseña incorrecto");

@@ -50,8 +50,8 @@ let clinicHistorySchema = mongoose.Schema({
 					exSubjetivoCVC : String,
 					RXFinalESF : String,
 					RXFinalADD : String,
-					RXFinalAV : String,
-	}
+					RXFinalAV : String
+	},
 	tipoLente : String,
 	material : String,
 	color : String,
@@ -67,7 +67,7 @@ let patientSchema = mongoose.Schema({
 	ciudad : String,
 	estado : String,
 	historialClinico : String
-})
+});
 
 clinicHistorySchema.index({'$**' : 'text'});
 patientSchema.index({'$**' : 'text'});
@@ -106,7 +106,7 @@ const userList = {
 				throw new Error(err);
 			});
 	},
-}
+};
 
 const clinicList ={
 	get : function(){
@@ -148,7 +148,7 @@ const clinicList ={
 	getKeyword : function(keyword){
 
 	}
-}
+};
 
 const patientList = {
 	get : function(){
@@ -190,8 +190,6 @@ const patientList = {
 	getKeyword : function(keyword){
 
 	}
-}
+};
 
-module.exports = {userList};
-module.exports = {clinicList};
-module.exports = {patientList};
+module.exports = {userList,clinicList,patientList};

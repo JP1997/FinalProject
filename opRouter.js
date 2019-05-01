@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {userList} = require('./opModel');
-const {clinicList} = require('./opModel');
-const {patientList} = require('./opModel');
+const {userList, clinicList,patientList} = require('./opModel');
+
 
 
 
@@ -119,7 +118,7 @@ router.get('/patient', (req,res,next) => {
 });
 
 router.post('/patient', (req,res,next) => {
-	let requiredFields = ['nombre','fechaNacimiento','direccion','telefono','ciudad','estado'];
+	let requiredFields = ['nombre'];
 
 	for(let i = 0; i < requiredFields.length; i++){
 		let currentField = requiredFields[i];
@@ -132,19 +131,10 @@ router.post('/patient', (req,res,next) => {
 		}
 	}
 
-	let newPatient = {
-		nombre : req.body.nombre,
-		fechaNacimiento : req.body.fechaNacimiento,
-		ocupacion : req.body.ocupacion,
-		direccion : req.body.direccion,
-		telefono :req.body.telefono,
-		ciudad : req.body.ciudad,
-		estado : req.body.estado,
-		historialClinico : req.body.historialClinico
-	};
+	let newPatient = req.body;
 
 
-	patientList.add(newUser)
+	patientList.add(newPatient)
 		.then(response => {
 			res.status(201).json({
 				message : "Successfully added the user",
@@ -190,7 +180,7 @@ router.put('/patient/:id', (req,res,next) => {
 		})
 });
 
-router.remove('/patient', (req,res,next) => {
+router.delete('/patient', (req,res,next) => {
 
 	let requiredFields = ['_id'];
 
@@ -340,5 +330,7 @@ router.delete('/clinic', (req,res,next) => {
 			})
 		})
 })
+
+
 
 module.exports = router;
