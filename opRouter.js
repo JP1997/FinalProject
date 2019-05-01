@@ -117,6 +117,25 @@ router.get('/patient', (req,res,next) => {
 		});	
 });
 
+router.get('/patient/:name', (req,res,next) => {
+	let nombre = req.params.name;
+	patientList.getByName(nombre)
+		.then(response => {
+			res.status(200).json({
+				message : 'Successfully sent all the users',
+				status : 200,
+				patient : response
+			});
+		})
+		.catch(err =>{
+			res.status(500).json({
+				message: "Internal server error",
+				status : 500 
+			});
+			return next();
+		});	
+});
+
 router.post('/patient', (req,res,next) => {
 	let requiredFields = ['nombre'];
 

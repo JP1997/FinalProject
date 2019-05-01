@@ -189,6 +189,15 @@ const patientList = {
 	},
 	getKeyword : function(keyword){
 
+	},
+	getByName : function(name){
+		return Patient.find({$text : {$search : name}})
+			.then(patient => {
+				return patient;
+			})
+			.catch(err => {
+				throw new new Error(err);
+			});
 	}
 };
 

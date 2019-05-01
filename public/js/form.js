@@ -1,6 +1,48 @@
 
+function displayPatients(data){
+	$('.Paciente').html("");
 
-function searchPatient(){
+	for(let i = 0; i< data.length;i++){
+		$('.Paciente').append(`
+						<div>
+							<div>Nombre : <input type="text" disabled="disabled" value="${data[i].nombre}"/> </div>
+							<div>Dirección : <input type="text" disabled="disabled" value="${data[i].direccion}"/> </div>
+							<button type="submit" class="buttonPatient"> 
+								Usar
+							</button> 
+						</div>
+							`);
+		}
+}
+
+
+
+
+function searchPatient(nombre){
+	console.log(nombre);
+	let url = `./optic-api/patient/${nombre}`;
+	let settings = {
+					method : 'GET',
+					headers: {
+						'Content-Type' : 'application/json'
+					}
+	};
+
+	fetch(url,settings)
+		.then(response => {
+			if(response.ok){
+				return response.json();
+			}
+			throw new Error(response.statusText)
+		
+		})
+		.then(responseJSON => {
+			console.log(responseJSON);
+			displayPatients(responseJSON.patient);
+		})
+		.catch(err => {
+			console.log(err);
+		});
 
 }
 
@@ -109,6 +151,7 @@ function watchForm(){
 	$('.submitPatient').on('click', function(event) {
 		let searchBox =$('.searchBox').val();
 		
+		searchPatient(searchBox);
 	});
 }
 
