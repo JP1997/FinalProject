@@ -56,7 +56,6 @@ function watchForm(){
 			estado : estadoPaciente,
 			historialClinico : historial
 		};
-		console.log(data);
 		addUser(data);
 
 	});

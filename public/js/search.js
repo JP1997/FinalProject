@@ -26,7 +26,7 @@ function displayClinic(data, number){
 													Doctor
 												</b>
 												</label>
-												<input disabled="disabled class="doctorName" type="text" value="${data[i].doctor}">
+												<input disabled="disabled" class="doctorName" type="text" value="${data[i].doctor}">
 											</div>
 
 											<label for="Nombre">
@@ -34,56 +34,56 @@ function displayClinic(data, number){
 													Nombre
 												</b>
 											</label>
-											<input disabled="disabled class="nombrePaciente" type="text" value="${data[i].nombre}">
+											<input disabled="disabled" class="nombrePaciente" type="text" value="${data[i].nombre}">
 
 											<label for="Edad">
 												<b>
 													Fecha de nacimiento
 												</b>
 											</label>
-											<input disabled="disabled class="edadPaciente" type="date" value="${data[i].edad}">
+											<input disabled="disabled" class="edadPaciente" type="date" value="${data[i].edad}">
 
 											<label for="Ocupacion">
 												<b>
 													Ocupacion
 												</b>
 											</label>
-											<input disabled="disabled class="ocupacionPaciente" type="text" value="${data[i].ocupacion}">
+											<input disabled="disabled" class="ocupacionPaciente" type="text" value="${data[i].ocupacion}">
 
 											<label for="Dirrecion">
 												<b>
 													Dirección
 												</b>
 											</label>
-											<input disabled="disabled class="direccionPaciente" type="text" value="${data[i].direccion}">
+											<input disabled="disabled" class="direccionPaciente" type="text" value="${data[i].direccion}">
 
 											<label for="Tel">
 												<b>
 													Telefono
 												</b>
 											</label>
-											<input disabled="disabled class="telefonoPaciente" type="text" value="${data[i].telefono}">
+											<input disabled="disabled" class="telefonoPaciente" type="text" value="${data[i].telefono}">
 
 											<label for="CD">
 												<b>
 													Ciudad
 												</b>
 											</label>
-											<input disabled="disabled class="ciudadPaciente" type="text" value="${data[i].ciudad}">
+											<input disabled="disabled" class="ciudadPaciente" type="text" value="${data[i].ciudad}">
 
 											<label for="Estado">
 												<b>
 													Estado
 												</b>
 											</label>
-											<input disabled="disabled class="estadoPaciente" type="text" value="${data[i].estado}">
+											<input disabled="disabled" class="estadoPaciente" type="text" value="${data[i].estado}">
 
 											<label for="Motivo de Consulto">
 												<b>
 													Motivo de Consulta
 												</b>
 											</label>
-											<input disabled="disabled class="motivoPaciente" type="text" value="${data[i].motivo}">
+											<input disabled="disabled" class="motivoPaciente" type="text" value="${data[i].motivo}">
 
 											<label for="HistorialClinico">
 												<b>
@@ -91,7 +91,7 @@ function displayClinic(data, number){
 												</b>
 											</label>
 
-											<textarea disabled="disabled class="historialClinico" value="${data[i].historialClinico}" >${data[i].historialClinico}</textarea>
+											<textarea disabled="disabled" class="historialClinico" value="${data[i].historialClinico}" >${data[i].historialClinico}</textarea>
 										</div>
 
 										<div class="Oftalmoscopia">
@@ -102,11 +102,11 @@ function displayClinic(data, number){
 
 										<span>
 												Observaciones Ojo Derecho
-												<textarea disabled="disabled class="observacionesDerecho" rows="4" cols="50"  value="${data[i].ojoDerecho.observaciones}">${data[i].ojoDerecho.observaciones}</textarea>
+												<textarea disabled="disabled" class="observacionesDerecho" rows="4" cols="50"  value="${data[i].ojoDerecho.observaciones}">${data[i].ojoDerecho.observaciones}</textarea>
 										</span>
 										<span>
 												Observaciones Ojo Izquierdo 
-												<textarea disabled="disabled class="observacionesIzquierdo" rows="4" cols="50" value="${data[i].ojoIzquierdo.observaciones}" >${data[i].ojoIzquierdo.observaciones}</textarea>
+												<textarea disabled="disabled" class="observacionesIzquierdo" rows="4" cols="50" value="${data[i].ojoIzquierdo.observaciones}" >${data[i].ojoIzquierdo.observaciones}</textarea>
 										</span>
 
 
@@ -129,13 +129,13 @@ function displayClinic(data, number){
 														<span>
 															O.D.
 														</span>
-														<input disabled="disabled class="RXAnteriorODESF" type="text" value="${data[i].ojoDerecho.RXAnteriorESF}" >
+														<input disabled="disabled" class="RXAnteriorODESF" type="text" value="${data[i].ojoDerecho.RXAnteriorESF}" >
 													</th>
 												</tr>
 												<tr>
 													<th>
 														<span> O.I. </span>
-														<input disabled="disabled class="RXAnteriorOIESF" type="text" value="${data[i].ojoIzquierdo.RXAnteriorESF}">
+														<input disabled="disabled" class="RXAnteriorOIESF" type="text" value="${data[i].ojoIzquierdo.RXAnteriorESF}">
 													</th>
 												</tr>
 											</table>
@@ -155,14 +155,14 @@ function displayClinic(data, number){
 													<th> C.V </th>
 												</tr>
 												<tr>
-													<th> <span> 20/ </span> <input disabled="disabled class="AgudezaODSL" type="text" value="${data[i].ojoDerecho.agudezaVisual.SL}"> </th>
-													<th> <span> 20/ </span> <input disabled="disabled class="AgudezaODAE" type="text" value="${data[i].ojoDerecho.agudezaVisual.AE}"> </th>
-													<th> <span> 20/ </span> <input disabled="disabled class="AgudezaODCV" type="text" value="${data[i].ojoDerecho.agudezaVisual.CV}"> </th>
+													<th> <span> 20/ </span> <input disabled="disabled" class="AgudezaODSL" type="text" value="${data[i].ojoDerecho.agudezaVisual.SL}"> </th>
+													<th> <span> 20/ </span> <input disabled="disabled" class="AgudezaODAE" type="text" value="${data[i].ojoDerecho.agudezaVisual.AE}"> </th>
+													<th> <span> 20/ </span> <input disabled="disabled" class="AgudezaODCV" type="text" value="${data[i].ojoDerecho.agudezaVisual.CV}"> </th>
 												</tr>
 												<tr>
-													<th> <span> 20/ </span> <input disabled="disabled class="AgudezaOISL" type="text" value="${data[i].ojoIzquierdo.agudezaVisual.SL}"> </th>
-													<th> <span> 20/ </span> <input disabled="disabled class="AgudezaOIAE" type="text" value="${data[i].ojoIzquierdo.agudezaVisual.AE}"> </th>
-													<th> <span> 20/ </span> <input disabled="disabled class="AgudezaOICV" type="text" value="${data[i].ojoIzquierdo.agudezaVisual.CV}"> </th>
+													<th> <span> 20/ </span> <input disabled="disabled" class="AgudezaOISL" type="text" value="${data[i].ojoIzquierdo.agudezaVisual.SL}"> </th>
+													<th> <span> 20/ </span> <input disabled="disabled" class="AgudezaOIAE" type="text" value="${data[i].ojoIzquierdo.agudezaVisual.AE}"> </th>
+													<th> <span> 20/ </span> <input disabled="disabled" class="AgudezaOICV" type="text" value="${data[i].ojoIzquierdo.agudezaVisual.CV}"> </th>
 												</tr>
 											</table>
 											</span>
@@ -174,12 +174,12 @@ function displayClinic(data, number){
 													<th> Retinoscopia </th>
 												</tr>
 												<tr>
-													<th> <span> O.D. </span>   <input disabled="disabled class="RetOD" type="text" value="${data[i].ojoDerecho.retinoscopia}"> </th>
-													<th> <span> 20/ </span>   <input disabled="disabled class="RetOD20" type="text" value="${data[i].ojoDerecho.retinoscopia20}"> </th>
+													<th> <span> O.D. </span>   <input disabled="disabled" class="RetOD" type="text" value="${data[i].ojoDerecho.retinoscopia}"> </th>
+													<th> <span> 20/ </span>   <input disabled="disabled" class="RetOD20" type="text" value="${data[i].ojoDerecho.retinoscopia20}"> </th>
 												</tr>
 												<tr>
-													<th> <span> O.I. </span>   <input disabled="disabled class="RetOI" type="text" value="${data[i].ojoIzquierdo.retinoscopia}"> </th>
-													<th> <span> 20/ </span>   <input disabled="disabled class="RetOI20" type="text" value="${data[i].ojoIzquierdo.retinoscopia20}"> </th>
+													<th> <span> O.I. </span>   <input disabled="disabled" class="RetOI" type="text" value="${data[i].ojoIzquierdo.retinoscopia}"> </th>
+													<th> <span> 20/ </span>   <input disabled="disabled" class="RetOI20" type="text" value="${data[i].ojoIzquierdo.retinoscopia20}"> </th>
 												</tr>
 											</table>
 											</span>
@@ -194,14 +194,14 @@ function displayClinic(data, number){
 													<th> C/V C </th>
 												</tr>
 												<tr>
-													<th> <span> O.D. </span>   <input disabled="disabled class="SubjetivoOD" type="text" value="${data[i].ojoDerecho.exSubjetivo}"> </th>
-													<th> <span> 20/ </span>   <input disabled="disabled class="SubjetivoODCVL" type="text" value="${data[i].ojoDerecho.exSubjetivoCVL}"> </th>
-													<th> <input disabled="disabled class="SubjetivoODCVC" type="text" value="${data[i].ojoDerecho.exSubjetivoCVC}"> </th>
+													<th> <span> O.D. </span>   <input disabled="disabled" class="SubjetivoOD" type="text" value="${data[i].ojoDerecho.exSubjetivo}"> </th>
+													<th> <span> 20/ </span>   <input disabled="disabled" class="SubjetivoODCVL" type="text" value="${data[i].ojoDerecho.exSubjetivoCVL}"> </th>
+													<th> <input disabled="disabled" class="SubjetivoODCVC" type="text" value="${data[i].ojoDerecho.exSubjetivoCVC}"> </th>
 												</tr>
 												<tr>
-													<th> <span> O.I. </span>   <input disabled="disabled class="SubjetivoOI" type="text" value="${data[i].ojoIzquierdo.exSubjetivo}"> </th>
-													<th> <span> 20/ </span>   <input disabled="disabled class="SubjetivoOICVL" type="text" value="${data[i].ojoIzquierdo.exSubjetivoCVL}"> </th>
-													<th> <input disabled="disabled class="SubjetivoOICVC" type="text" value="${data[i].ojoIzquierdo.exSubjetivoCVC}"> </th>
+													<th> <span> O.I. </span>   <input disabled="disabled" class="SubjetivoOI" type="text" value="${data[i].ojoIzquierdo.exSubjetivo}"> </th>
+													<th> <span> 20/ </span>   <input disabled="disabled" class="SubjetivoOICVL" type="text" value="${data[i].ojoIzquierdo.exSubjetivoCVL}"> </th>
+													<th> <input disabled="disabled" class="SubjetivoOICVC" type="text" value="${data[i].ojoIzquierdo.exSubjetivoCVC}"> </th>
 												</tr>
 
 											</table>
@@ -224,24 +224,24 @@ function displayClinic(data, number){
 													<th> Color </th>
 												</tr>
 												<tr>
-													<th> <span> O.D. </span>   <input disabled="disabled class="RxFinalODESF" type="text" value="${data[i].ojoDerecho.RXFinalESF}"> </th>
-													<th> <input disabled="disabled class="RxFinalODADD" type="text" value="${data[i].ojoDerecho.RXFinalADD}"> </th>
-													<th> <span> 20/ </span>   <input disabled="disabled class="RxFinalODAV" type="text" value="${data[i].ojoDerecho.RXFinalAV}"> </th>
-													<th> <input disabled="disabled class="tipoLente" type="text" value="${data[i].tipoLente}"> </th>
-													<th> <input disabled="disabled class="material" type="text" value="${data[i].material}"> </th>
-													<th> <input disabled="disabled class="color" type="text" value="${data[i].color}"> </th>
+													<th> <span> O.D. </span>   <input disabled="disabled" class="RxFinalODESF" type="text" value="${data[i].ojoDerecho.RXFinalESF}"> </th>
+													<th> <input disabled="disabled" class="RxFinalODADD" type="text" value="${data[i].ojoDerecho.RXFinalADD}"> </th>
+													<th> <span> 20/ </span>   <input disabled="disabled" class="RxFinalODAV" type="text" value="${data[i].ojoDerecho.RXFinalAV}"> </th>
+													<th> <input disabled="disabled" class="tipoLente" type="text" value="${data[i].tipoLente}"> </th>
+													<th> <input disabled="disabled" class="material" type="text" value="${data[i].material}"> </th>
+													<th> <input disabled="disabled" class="color" type="text" value="${data[i].color}"> </th>
 												</tr>
 												<tr>
-													<th> <span> O.I. </span>   <input disabled="disabled class="RxFinalOIESF" type="text" value="${data[i].ojoIzquierdo.RXFinalESF}"> </th>
-													<th> <input disabled="disabled class="RxFinalOIADD" type="text" value="${data[i].ojoIzquierdo.RXFinalADD}"> </th>
-													<th> <span> 20/ </span>   <input disabled="disabled class="RxFinalOIAV" type="text" value="${data[i].ojoIzquierdo.RXFinalAV}"> </th>
+													<th> <span> O.I. </span>   <input disabled="disabled" class="RxFinalOIESF" type="text" value="${data[i].ojoIzquierdo.RXFinalESF}"> </th>
+													<th> <input disabled="disabled" class="RxFinalOIADD" type="text" value="${data[i].ojoIzquierdo.RXFinalADD}"> </th>
+													<th> <span> 20/ </span>   <input disabled="disabled" class="RxFinalOIAV" type="text" value="${data[i].ojoIzquierdo.RXFinalAV}"> </th>
 												</tr>
 											</table>
 											</div>
 
 										<span>
 												Observaciones Finales					
-												<textarea disabled="disabled class="observacionesFinales" value="">${data[i].observacionFinal}</textarea>
+												<textarea disabled="disabled" class="observacionesFinales" value="">${data[i].observacionFinal}</textarea>
 										</span>
 
 										<div>
@@ -253,6 +253,7 @@ function displayClinic(data, number){
 									</form>
 									<p></p>
 								</fieldset>
+								<p></p>
 
 		`);
 	}
