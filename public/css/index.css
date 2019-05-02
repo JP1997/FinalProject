@@ -23,7 +23,7 @@ input[type=text], input[type=password], input[type=email]{
   box-sizing: border-box;
 }
 
-button {
+.iButton {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -34,7 +34,19 @@ button {
 }
 
 
-button:hover {
+.iButton:hover {
+  opacity: 0.8;
+}
+
+
+.nButton {
+  text-align: center;
+  background-color: #2a9df4;
+  margin: 0 0 8px 0;
+
+}
+
+.nButton:hover {
   opacity: 0.8;
 }
 
