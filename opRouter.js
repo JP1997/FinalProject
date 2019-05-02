@@ -139,7 +139,6 @@ router.get('/patient/:name', (req,res,next) => {
 router.get('/patientGet/:id', (req,res,next) => {
 
 	let id = req.params.id;
-
 	patientList.getById(id)
 		.then(response => {
 			res.status(200).json({
@@ -276,6 +275,131 @@ router.get('/clinic', (req,res,next) =>{
 		});	
 });
 
+router.get('/clinicGet/:id', (req,res,next) => {
+
+	let id = req.params.id;
+	clinicList.getById(id)
+		.then(response => {
+			res.status(200).json({
+				message : 'Successfully sent all the users',
+				status : 200,
+				clinic : response
+			});
+		})
+		.catch(err =>{
+			res.status(500).json({
+				message: "Internal server error",
+				status : 500 
+			});
+			return next();
+		});	
+});
+
+router.get('/clinic/general/:value', (req,res,next) =>{
+
+	let value = req.params.value;
+
+	clinicList.getGeneral(value)
+		.then(response => {
+			res.status(200).json({
+				message : 'Successfully sent all the users',
+				status : 200,
+				clinic : response
+			});
+		})
+		.catch(err =>{
+			res.status(500).json({
+				message: "Internal server error",
+				status : 500 
+			});
+			return next();
+		});	
+});
+
+router.get('/clinic/name/:value', (req,res,next) =>{
+	
+	let value = req.params.value;
+
+	clinicList.getName(value)
+		.then(response => {
+			res.status(200).json({
+				message : 'Successfully sent all the users',
+				status : 200,
+				clinic : response
+			});
+		})
+		.catch(err =>{
+			res.status(500).json({
+				message: "Internal server error",
+				status : 500 
+			});
+			return next();
+		});	
+});
+
+router.get('/clinic/edad/:value', (req,res,next) =>{
+
+	let value = req.params.value;
+
+	clinicList.getEdad(value)
+		.then(response => {
+			res.status(200).json({
+				message : 'Successfully sent all the users',
+				status : 200,
+				clinic : response
+			});
+		})
+		.catch(err =>{
+			res.status(500).json({
+				message: "Internal server error",
+				status : 500 
+			});
+			return next();
+		});	
+});
+
+router.get('/clinic/ciudad/:value', (req,res,next) =>{
+
+	let value = req.params.value;
+
+	clinicList.getCiudad(value)
+		.then(response => {
+			res.status(200).json({
+				message : 'Successfully sent all the users',
+				status : 200,
+				clinic : response
+			});
+		})
+		.catch(err =>{
+			res.status(500).json({
+				message: "Internal server error",
+				status : 500 
+			});
+			return next();
+		});	
+});
+
+router.get('/clinic/doctor/:value', (req,res,next) =>{
+
+	let value = req.params.value;
+
+	clinicList.getDoctor(value)
+		.then(response => {
+			res.status(200).json({
+				message : 'Successfully sent all the users',
+				status : 200,
+				clinic : response
+			});
+		})
+		.catch(err =>{
+			res.status(500).json({
+				message: "Internal server error",
+				status : 500 
+			});
+			return next();
+		});	
+});
+
 router.post('/clinic', (req,res,next) => {
 	let requiredFields = ['nombre'];
 
@@ -291,8 +415,7 @@ router.post('/clinic', (req,res,next) => {
 	}
 
 	let newUser = req.body;
-	console.log(newUser);
-	console.log('hola');
+	
 	clinicList.add(newUser)
 		.then(response => {
 			res.status(201).json({
@@ -311,6 +434,7 @@ router.post('/clinic', (req,res,next) => {
 });
 
 router.put('/clinic/:id', (req,res,next) => {
+
 	if (!('id' in req.params))
 	{
 		res.status(406).json({
@@ -323,7 +447,7 @@ router.put('/clinic/:id', (req,res,next) => {
 	let putID = req.params.id;
 	let body = req.body;
 
-	clinicList.place(putID,body)
+	clinicList.update(putID,body)
 		.then(response => {
 			res.status(200).json({
 				message: "Post modified successfully",

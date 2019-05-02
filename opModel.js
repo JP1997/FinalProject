@@ -145,8 +145,59 @@ const clinicList ={
 				throw new Error(err);
 			});
 	},
-	getKeyword : function(keyword){
-
+	getName : function(value){
+		return ClinicHistory.find({"nombre" : {$regex : value, $options : 'i'}})
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	getEdad : function(value){
+		return ClinicHistory.find({"edad" : {$regex : value, $options : 'i'}})
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	getCiudad : function(value){
+		return ClinicHistory.find({"ciudad" : {$regex : value, $options : 'i'}})
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	getDoctor : function(value){
+		return ClinicHistory.find({"doctor" : {$regex : value, $options : 'i'}})
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
+	getGeneral: function(value){
+		return ClinicHistory.find({$text : {$search : value}})
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new new Error(err);
+			});
+	},
+	getById : function(id){
+		return ClinicHistory.findById(id)
+			.then(clinic => {
+				return clinic;
+			})
+			.catch(err => {
+				throw new new Error(err);
+			});
 	}
 };
 
@@ -200,7 +251,7 @@ const patientList = {
 			});
 	},
 	getById : function(id){
-		return Patient.find({_id : id})
+		return Patient.findById(id)
 			.then(patient => {
 				return patient;
 			})

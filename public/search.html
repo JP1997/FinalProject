@@ -27,13 +27,12 @@
 				<legend> Buscador de historias clinicas </legend>
 
 				<span>
-					<select>
-						<option value="Nombre"> Nombre </option>
-						<option value="Edad"> Edad </option>
-						<option value="Direccion"> Dirección </option>
-						<option value="Tel"> Telefono </option>
-						<option value="Ciudad"> Ciudad </option>
-						<option value="Estado"> Estado </option>
+					<select class="selectSearch">
+						<option value="general"> Busqueda General </option>
+						<option value="name"> Nombre </option>
+						<option value="edad"> Año de nacimiento </option>
+						<option value="ciudad"> Ciudad </option>
+						<option value="doctor"> Doctor </option>
 					</select>
 				</span>
 
@@ -41,9 +40,20 @@
 					<input class="searchBox" type="text"/>
 					<button class="submitButton" type="submit"> Enter </button> 
 				</span>
+				<p></p>
+				<div>
+					<input type="checkbox" class="advancedSearch"> Advanced Search
+					
+						<input class="resultNumber" type="number" placeholder="Ingrese el numero de resultados deseados" />
+					
+				</div>
 
 
 			</fieldset>
+
+			<div class="displayResults">
+			</div>
+
 
 		</main>
 
@@ -53,7 +63,7 @@
 		src="https://code.jquery.com/jquery-3.4.0.js"
 		integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
 		crossorigin="anonymous"></script>
-		<script src="./js/index.js"></script>
+		<script src="./js/search.js"></script>
 	</body>
 
 </html>

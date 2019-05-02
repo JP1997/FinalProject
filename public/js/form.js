@@ -196,19 +196,18 @@ function init(){
 }
 
 function showForm(data){
-	console.log(data);
 	$('.divPaciente').html("");
 	$('.searchPatient').hide();
 	$('.historialForm').show();
 
-	$('.nombrePaciente').val(data[0].nombre);
-	$('.edadPaciente').val(data[0].fechaNacimiento);
-	$('.ocupacionPaciente').val(data[0].ocupacion);
-	$('.direccionPaciente').val(data[0].direccion);
-	$('.telefonoPaciente').val(data[0].telefono);
-	$('.ciudadPaciente').val(data[0].ciudad);
-	$('.estadoPaciente').val(data[0].estado);
-	$('.historialClinico').val(data[0].historialClinico);
+	$('.nombrePaciente').val(data.nombre);
+	$('.edadPaciente').val(data.fechaNacimiento);
+	$('.ocupacionPaciente').val(data.ocupacion);
+	$('.direccionPaciente').val(data.direccion);
+	$('.telefonoPaciente').val(data.telefono);
+	$('.ciudadPaciente').val(data.ciudad);
+	$('.estadoPaciente').val(data.estado);
+	$('.historialClinico').val(data.historialClinico);
 
 }
 
@@ -218,7 +217,6 @@ $('.divPaciente').on("click",".usePatient", function(event) {
 	event.preventDefault();
 
 	let idP = $(this).parent().find('.idP').val();
-
 	let url = `./optic-api/patientGet/${idP}`;
 	let settings = {
 					method : 'GET',
